@@ -1,0 +1,118 @@
+html{
+  font-size: 62.5%;
+}
+
+.carousel-image-wrapper img{
+  width: 80rem;
+  height: 45rem;
+}
+
+.carousel-container{
+  max-width: 80rem;
+  max-height: 45rem;
+  overflow: hidden;
+  margin: 5rem auto;
+  position: relative;
+}
+
+.carousel-image-wrapper{
+  width: 100%;
+}
+
+.carousel-buttons{
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.btn-image{
+  width: 2rem;
+}
+
+.button{
+  height: 5rem;
+  width: 5rem;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgb(213, 242, 243);
+  opacity: .75;
+}
+
+.button:hover{
+  opacity: .9 ;
+}
+
+.prev{
+  margin-left: 2rem;
+}
+
+.next{
+  margin-right: 2rem;
+}
+
+.carousel-hidden{
+  display: none;
+}
+
+.carousel-visible{
+  display: block;
+}
+
+.carousel-nav{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.carousel-indicator{
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 0;
+  background: rgb(213, 242, 243);
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+
+.carousel-indicator.current{
+  background-color: rgb(243, 237, 151);
+}
+
+.prev-slide{
+  animation: prevImg .8s;
+}
+
+.next-slide{
+  animation: nextImg .8s;
+}
+
+@keyframes prevImg{
+  0%{
+    opacity: .8;
+    transform: translateX(-80rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nextImg{
+  0%{
+    opacity: .8;
+    transform: translateX(80rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
